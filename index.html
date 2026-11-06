@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ketamine in Emergency and Critical Care — Indication-Based Decision Algorithm</title>
+<meta name="description" content="Interactive, referenced walkthrough of the manuscript's own Figure 1: ketamine across procedural sedation, RSI/airway, acute agitation, ICU analgosedation, and haemodynamic instability.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="masthead">
+  <h1>Ketamine in Emergency and Critical Care Medicine: Indication-Based Decision Algorithm</h1>
+  <p class="masthead__byline"><strong>Dr. Özgür Karcıoğlu</strong> &amp; <strong>Dr. Satuk Buğra Han Bozatlı</strong> — an interactive companion to "Ketamine in Emergency and Critical Care Medicine: A Narrative Review of Sedation, Analgesia, and Resuscitative Interventions."</p>
+  <p class="masthead__disclaimer">Academic / educational reference tool, not a substitute for institutional protocol or bedside clinical judgement. Verify any dose or timing against current local protocol before clinical use. Reference verification for this tool differs from the rest of this atlas — see the Status section of <a href="README.md">README.md</a> and the References list below.</p>
+</header>
+
+<main class="workstation">
+  <div class="scope">
+    <p class="scope__hint">Scroll sideways to see all five lanes — the diagram keeps its full desktop layout on mobile.</p>
+    <div class="flow" id="flow">
+      <svg class="edges" id="edges"></svg>
+    </div>
+  </div>
+
+  <aside class="readout" id="readout">
+    <button type="button" class="readout__close" id="readoutClose">Close ✕</button>
+    <div class="readout__idle" id="readoutIdle">
+      Select any box in the diagram — the trigger, the indication, a dose, a decision, or one of the reference panels — to read what it means, why the algorithm calls for it, and the sources behind it.
+    </div>
+    <div class="readout__content" id="readoutContent" hidden></div>
+  </aside>
+</main>
+
+<div class="scope-backdrop" id="backdrop"></div>
+
+<p class="abbrev-note">
+  <strong>Abbreviations.</strong> NMDA, N-methyl-D-aspartate; HCN1, hyperpolarisation-activated cyclic nucleotide-gated channel 1; AMPA, α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid; CYP, cytochrome P450; Vd, volume of distribution; HR, heart rate; MAP, mean arterial pressure; CO, cardiac output; IV, intravenous; IM, intramuscular; IN, intranasal; RSI, rapid sequence intubation; ICU, intensive care unit; ED, emergency department; PSA, procedural sedation and analgesia; ExDS, excited delirium syndrome; PADIS, Pain, Agitation/Sedation, Delirium, Immobility, and Sleep Disruption; SCCM, Society of Critical Care Medicine; KSCCM, Korean Society of Critical Care Medicine; RASS, Richmond Agitation-Sedation Scale; ICP, intracranial pressure; TBI, traumatic brain injury; CNS, central nervous system; COPD, chronic obstructive pulmonary disease; ETCO2, end-tidal carbon dioxide; BP, blood pressure; ECG, electrocardiogram; EEG, electroencephalogram.
+</p>
+
+<details class="references">
+  <summary>References <span class="count" id="refCount"></span></summary>
+  <ol id="referencesList"></ol>
+</details>
+
+<footer class="site">
+  <span>Part of the <a href="https://satbuhan.github.io/clinical-algorithm-atlas/" target="_blank" rel="noopener">Clinical Algorithm Atlas</a>:</span>
+  <a href="https://satbuhan.github.io/aortic-dissection-protocol/" target="_blank" rel="noopener">Aortic dissection</a>
+  <a href="https://satbuhan.github.io/pte-thrombolysis-protocol/" target="_blank" rel="noopener">PTE thrombolysis</a>
+  <a href="https://satbuhan.github.io/lmwh-nste-acs-protocol/" target="_blank" rel="noopener">LMWH in NSTE-ACS</a>
+  <a href="https://satbuhan.github.io/vasopressor-shock-protocol/" target="_blank" rel="noopener">Vasopressor selection</a>
+  <a href="https://satbuhan.github.io/epinephrine-revisited-protocol/" target="_blank" rel="noopener">Epinephrine revisited</a>
+  <a href="https://satbuhan.github.io/wbct-trauma-protocol/" target="_blank" rel="noopener">WBCT in trauma shock</a>
+  <a href="https://satbuhan.github.io/anticoagulant-reversal-protocol/" target="_blank" rel="noopener">Anticoagulant reversal</a>
+  <a href="https://satbuhan.github.io/ketamine-head-injury-protocol/" target="_blank" rel="noopener">Ketamine in head injury</a>
+  <a href="https://satbuhan.github.io/midazolam-clonazepam-protocol/" target="_blank" rel="noopener">Midazolam vs clonazepam</a>
+  <a href="https://satbuhan.github.io/influenza-antiviral-protocol/" target="_blank" rel="noopener">Influenza antivirals</a>
+  <a href="https://satbuhan.github.io/agitation-delirium-protocol/" target="_blank" rel="noopener">Agitation &amp; delirium</a>
+  <a href="https://satbuhan.github.io/nsaid-pain-protocol/" target="_blank" rel="noopener">NSAID selection</a>
+  <a href="https://satbuhan.github.io/lidocaine-prilocaine-protocol/" target="_blank" rel="noopener">Lidocaine vs prilocaine</a>
+  <a href="https://satbuhan.github.io/dapagliflozin-overdose-protocol/" target="_blank" rel="noopener">Dapagliflozin overdose</a>
+  <a href="https://satbuhan.github.io/obesity-critical-care-protocol/" target="_blank" rel="noopener">Obesity in critical care</a>
+  <span>·</span>
+  <a href="https://github.com/satbuhan" target="_blank" rel="noopener">github.com/satbuhan</a>
+  <span>·</span>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>
+</footer>
+
+<script src="assets/content.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
