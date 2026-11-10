@@ -30,6 +30,11 @@
    METHODOLOGY.md's "Citation verification" section for the full policy and
    README.md's Status section for this tool's own disclosure. */
 
+// Date this tool's content and citations were last built/checked
+// together (see assets/app.js's References summary, and the hub
+// README's "Content search index"-adjacent conventions doc).
+const VERIFIED = "2026-11-06";
+
 const REFERENCES = [
   { id: 1, kind: "As cited in the manuscript; not independently re-verified", text: "Domino EF. Taming the ketamine tiger. Anesthesiology. 2010;113(3):678–684.", url: "https://doi.org/10.1097/ALN.0b013e3181ed09a2" },
   { id: 2, kind: "As cited in the manuscript; not independently re-verified", text: "Kurdi MS, Theerth KA, Deva RS. Ketamine: current applications in anesthesia, pain, and critical care. Anesth Essays Res. 2014;8(3):283–290.", url: "https://doi.org/10.4103/0259-1162.143110" },
